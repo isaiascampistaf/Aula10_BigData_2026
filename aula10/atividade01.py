@@ -32,6 +32,42 @@
 
 #Correção
     
+# print("""
+# ========================================
+#             Caixa Eletrônico            
+# ========================================
+# """)
+# try:   #tente executar isto
+#     saldo = 1000
+#     saque = float(input('Quanto deseja sacar?  '))
+
+# except ValueError:    #se der este err, execute a linha abaixo
+#     print("\nInforme o valor corretamente")
+
+# except KeyboardInterrupt:
+#     print("\nPrograma Finalizado pelo usuário")
+
+# else:  # Se não der erro, faz isso
+    
+#     if saque > saldo:
+#         print('\nSaldo Insuficiente')
+
+#     elif saque < 2:
+#         print(f'\nO valor do saque deve ser a partir de R$ 2,00')
+
+#     else:
+#         saldo -= saque
+#         print('\nSaque realizado com sucesso')
+#         print(f'\nSaldo restante R$ {saldo:.2f}')
+
+# finally:
+#     print('\n--Operação Finalizada--')
+
+# print('\n===Sessão Encerrada===')
+
+
+
+
 print("""
 ========================================
             Caixa Eletrônico            
@@ -41,8 +77,8 @@ try:   #tente executar isto
     saldo = 1000
     saque = float(input('Quanto deseja sacar?  '))
 
-except ValueError:    #se der este err, execute a linha abaixo
-    print("\nInforme o valor corretamente")
+except Exception as e:    #desta forma ele pega o texto q apareceria no terminal e joga para variavel "e" e depois o texto aparece no print
+    print(f"\nInforme o valor corretamente:  {e}")
 
 except KeyboardInterrupt:
     print("\nPrograma Finalizado pelo usuário")
